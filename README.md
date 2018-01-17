@@ -1,4 +1,4 @@
-## Project base
+## Project base for Django==2.0
 
 프로젝트 생성을 쉽게 해주기 위한 directory
 
@@ -35,4 +35,6 @@ DJANGO_ALLOWED_HOSTS=['*']
 > [django secret key generator](http://www.miniwebtool.com/django-secret-key-generator/)에 들어가서 새로운 secret key를 generate 한 후 env에 넣어준다.
 
 
-- database settings: 현재는 local db가 sqlite. 맞는 psql 세팅으로 변경한 후 진행 가능
+## 추가사항
+- djaog-debug-toolbar는 추후 2.0 지원시 추가
+- django suit, filer 등 어드민 관련 항목 삭제
