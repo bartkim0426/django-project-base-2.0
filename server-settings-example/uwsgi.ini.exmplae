@@ -1,0 +1,13 @@
+[uwsgi]
+home = /home/username/project_env
+chdir = /home/username/project_name/project_dir
+wsgi-file = /home/username/projecdt_name/project_dir/path_to/wsgi.py
+
+for-readline = /home/path_to/uwsgi-env
+  env = %(_)
+endfor =
+socket = /home/path_to/test.sock
+vacuum = true
+chmod-socket = 666
+
+logto = /tmp/test.log

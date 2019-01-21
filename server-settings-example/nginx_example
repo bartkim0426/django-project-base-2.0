@@ -1,0 +1,19 @@
+server {
+    listen 80;
+    server_name {server};
+    client_max_body_size 75M;
+    include /etc/nginx/mime.types;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/path_to/test.sock;
+    }
+
+    location /media{
+        alias /home/path_to/mediafiles;
+    }
+
+    location /static{
+        alias /home/path_to/staticfiles;
+    }
+}

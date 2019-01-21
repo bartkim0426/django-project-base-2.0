@@ -1,0 +1,11 @@
+[Unit]
+Description=uWSGI Emperor service
+[Service]
+# ExecStartPre=/bin/bash -c ‘mkdir -p /run/uwsgi; chown username:www-data /run/uwsgi’
+ExecStart=/usr/local/bin/uwsgi --emperor /home/username/uwsgi/sites
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+[Install]
+WantedBy=multi-user.target
